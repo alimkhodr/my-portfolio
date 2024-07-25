@@ -1,5 +1,5 @@
-import { Container, Grid, styled, Typography } from "@mui/material"
-import Avatar from "../../../../assets/images/avatar.png"
+import { Container, Grid, styled, Typography } from "@mui/material";
+import Avatar from "../../../../assets/images/avatar.png";
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
@@ -12,19 +12,29 @@ const Hero = () => {
         height: "100vh",
         display: "flex",
         alignItems: "center",
-        [theme.breakpoints.up('xs')]:{ //<= mobile
+        [theme.breakpoints.up('xs')]: { //<= mobile
             paddingTop: "100px"
         },
-        [theme.breakpoints.up('md')]:{ //>= mobile
+        [theme.breakpoints.up('md')]: { //>= mobile
             paddingTop: "0"
         }
-    }))
+    }));
 
     const StyledImg = styled("img")(() => ({
-        width: "80%",
+        width: "75%",
         borderRadius: "50%",
         boxShadow: `0 0px 60px 1px ${theme.palette.primary.dark}`
-    }))
+    }));
+
+    const handleDownloadClick = () => {
+        // Adicione aqui a lógica para o download do CV
+        alert('Download CV clicked');
+    };
+
+    const handleContactClick = () => {
+        // Adicione aqui a lógica para o contato
+        alert('Contact me clicked');
+    };
 
     return (
         <>
@@ -35,16 +45,16 @@ const Hero = () => {
                             <StyledImg src={Avatar} />
                         </Grid>
                         <Grid item xs={12} md={7} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-                            <Typography color="secondary.main" variant="h1" textAlign="center" pb={2}>Ali Mohamed</Typography>
+                            <Typography color="secondary.main" variant="h1" textAlign="center" pb={1}>Ali Mohamed</Typography>
                             <Typography color="primary.contrastText" variant="h3" textAlign="center">I'm a Full Stack Developer</Typography>
-                            <Grid container display="flex" justifyContent="center" spacing={3}pt={3}>
+                            <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton>
+                                    <StyledButton onClick={handleDownloadClick}>
                                         <DownloadIcon /><Typography>Download CV</Typography>
                                     </StyledButton>
                                 </Grid>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton>
+                                    <StyledButton onClick={handleContactClick}>
                                         <EmailIcon /><Typography>Contact me</Typography>
                                     </StyledButton>
                                 </Grid>
@@ -54,6 +64,6 @@ const Hero = () => {
                 </Container>
             </StyledHero>
         </>
-    )
+    );
 }
-export default Hero
+export default Hero;
