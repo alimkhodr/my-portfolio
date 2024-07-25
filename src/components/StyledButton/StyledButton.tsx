@@ -7,9 +7,9 @@ interface StyledButtonProps {
 }
 
 const CustomButton = styled("button")(({ theme }) => ({
-  backgroundColor: "transparent",
-  border: `1px solid ${theme.palette.primary.contrastText}`,
-  borderRadius: "3px",
+  backgroundColor: theme.palette.secondary.dark,
+  border: "none",
+  borderRadius: "10px",
   padding: "5px 15px",
   width: "100%",
   display: "inline-flex",
@@ -17,8 +17,9 @@ const CustomButton = styled("button")(({ theme }) => ({
   justifyContent: "center",
   gap: "10px",
   color: theme.palette.primary.contrastText,
+  transition: "0.6s",
   '&:hover': {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.secondary.light,
   },
 }));
 
