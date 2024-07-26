@@ -1,14 +1,41 @@
-import { Container, Grid, styled, Typography } from "@mui/material";
+import { Container, Grid, keyframes, styled, Typography } from "@mui/material";
 import Avatar from "../../../../assets/images/avatar.png";
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import theme from "../../../../theme";
 
+// Animações
+const typing = keyframes`
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+`;
+
+const blinkCaret = keyframes`
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: ${theme.palette.primary.contrastText};
+  }
+`;
+
+const TypingText = styled(Typography)(({ theme }) => ({
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    borderRight: `3px solid ${theme.palette.primary.contrastText}`,
+    animation: `${typing} 2s steps(30, end), ${blinkCaret} 0.45s step-end infinite`,
+}));
+
+
 const Hero = () => {
 
     const StyledHero = styled("div")(({ theme }) => ({
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: `${theme.palette.primary.main}`,
         height: "100vh",
         display: "flex",
         alignItems: "center",
@@ -27,13 +54,11 @@ const Hero = () => {
     }));
 
     const handleDownloadClick = () => {
-        // Adicione aqui a lógica para o download do CV
-        alert('Download CV clicked');
+        window.open('https://drive.google.com/uc?export=download&id=1-Qasqgp78geDiTKdT3LScUGayjusZ8_Q', '_blank');
     };
 
     const handleContactClick = () => {
-        // Adicione aqui a lógica para o contato
-        alert('Contact me clicked');
+        window.location.href = 'mailto:ali.m.khodr@gmail.com';
     };
 
     return (
@@ -45,9 +70,11 @@ const Hero = () => {
                             <StyledImg src={Avatar} />
                         </Grid>
                         <Grid item xs={12} md={7} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-                            <Typography color="secondary.main" variant="h1" textAlign="center" pb={1}>Ali Mohamed</Typography>
-                            <Typography color="primary.contrastText" variant="h3" textAlign="center">I'm a Full Stack Developer</Typography>
-                            <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
+                            <Typography color="secondary.main" variant="h1" textAlign="center">Ali Mohamed</Typography>
+                            <TypingText color="primary.contrastText" variant="h4" textAlign="center">
+                                I'm a Full Stack Developer
+                            </TypingText>
+                            <Grid container display="flex" justifyContent="center" spacing={3} pt={4}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
                                     <StyledButton onClick={handleDownloadClick}>
                                         <DownloadIcon /><Typography>Download CV</Typography>
