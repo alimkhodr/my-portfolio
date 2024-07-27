@@ -1,4 +1,4 @@
-
+// src/pages/Home/sections/Projects/Projects.tsx
 import { Container, Grid, styled, Typography } from "@mui/material";
 import CardProjects from "../../../../components/CardProject/CardProject";
 import { fetchRepositories } from "../../../../services/githubService";
@@ -38,6 +38,7 @@ const Projects = () => {
                             date={new Date(repo.created_at).toLocaleDateString()}
                             description={repo.description || 'No description provided'}
                             link={repo.html_url}
+                            technologies={repo.languages}
                         />
                     </Grid>
                 ))}
