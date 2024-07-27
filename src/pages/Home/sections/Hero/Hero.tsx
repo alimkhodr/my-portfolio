@@ -35,12 +35,12 @@ const TypingText = styled(Typography)(({ theme }) => ({
 const Hero = () => {
 
     const StyledHero = styled("div")(({ theme }) => ({
-        backgroundColor: `${theme.palette.primary.main}`,
+        background: "radial-gradient(circle, rgba(10,10,10,1)40%,rgba(0,30,178,1)230%)",
         height: "100vh",
         display: "flex",
         alignItems: "center",
         [theme.breakpoints.up('xs')]: { //<= mobile
-            paddingTop: "100px"
+            paddingTop: "30px"
         },
         [theme.breakpoints.up('md')]: { //>= mobile
             paddingTop: "0"
@@ -75,12 +75,12 @@ const Hero = () => {
                                 I'm a Full Stack Developer
                             </TypingText>
                             <Grid container display="flex" justifyContent="center" spacing={3} pt={4}>
-                                <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                                <Grid item xs={10} md={4} display="flex" justifyContent="center">
                                     <StyledButton onClick={handleDownloadClick}>
                                         <DownloadIcon /><Typography>Download CV</Typography>
                                     </StyledButton>
                                 </Grid>
-                                <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                                <Grid item xs={10} md={4} display="flex" justifyContent="center">
                                     <StyledButton onClick={handleContactClick}>
                                         <EmailIcon /><Typography>Contact me</Typography>
                                     </StyledButton>

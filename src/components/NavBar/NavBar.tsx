@@ -18,18 +18,18 @@ const NavBar = () => {
 
     return (
         <>
-            <AppBar position="absolute">
+            <AppBar position="fixed">
                 <StyledToolbar>
                     <div style={{ display: 'flex', justifyContent: 'space-evenly', width: '100%' }}>
-                        <MenuItem sx={{ display: { xs: 'none', md: 'block' } }}>About</MenuItem>
-                        <MenuItem sx={{ display: { xs: 'none', md: 'block' } }}>Skills</MenuItem>
-                        <MenuItem sx={{ display: { xs: 'none', md: 'block' } }}>Projects</MenuItem>
+                        <MenuItem sx={{ display: { xs: 'none', md: 'block' } }} component="a" href="#about">About</MenuItem>
+                        <MenuItem sx={{ display: { xs: 'none', md: 'block' } }} component="a" href="#skills">Skills</MenuItem>
+                        <MenuItem sx={{ display: { xs: 'none', md: 'block' } }} component="a" href="#projects">Projects</MenuItem>
                     </div>
                     <IconButton
                         edge="end"
                         color="inherit"
                         aria-label="menu"
-                        sx={{ mr: 2, display: { xs: 'block', md: 'none' } }}
+                        sx={{ display: { xs: 'block', md: 'none' } }}
                         onClick={handleDrawerToggle}
                     >
                         <MenuIcon />
@@ -42,14 +42,14 @@ const NavBar = () => {
                 onClose={handleDrawerToggle}
                 sx={{ display: { xs: 'block', md: 'none' }, '& .MuiDrawer-paper': { backgroundColor: theme.palette.secondary.dark, color: 'white' } }}
             >
-                <List >
-                    <ListItem button onClick={handleDrawerToggle}>
+                <List>
+                    <ListItem button component="a" href="#about" onClick={handleDrawerToggle}>
                         <ListItemText primary="About" />
                     </ListItem>
-                    <ListItem button onClick={handleDrawerToggle}>
+                    <ListItem button component="a" href="#skills" onClick={handleDrawerToggle}>
                         <ListItemText primary="Skills" />
                     </ListItem>
-                    <ListItem button onClick={handleDrawerToggle}>
+                    <ListItem button component="a" href="#projects" onClick={handleDrawerToggle}>
                         <ListItemText primary="Projects" />
                     </ListItem>
                 </List>
