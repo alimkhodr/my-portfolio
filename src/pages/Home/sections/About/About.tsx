@@ -1,4 +1,4 @@
-import { Container, Grid, styled, Typography } from "@mui/material";
+import { Container, Grid, styled, Typography, Tooltip } from "@mui/material";
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import SchoolIcon from '@mui/icons-material/School';
 
@@ -33,15 +33,31 @@ const About = () => {
                             <StyledCard>
                                 <WorkspacePremiumIcon />
                                 <Typography color="primary.main" textAlign="center" fontWeight={"bold"}>Experience</Typography>
-                                <Typography color="primary.main" textAlign="center">+1 year at APTIV</Typography>
+                                <Typography color="primary.main" textAlign="center">
+                                    +1,5 year at
+                                    <a href="https://www.aptiv.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        <span> APTIV </span>
+                                    </a>
+                                    (Internship)
+                                </Typography>
                             </StyledCard>
                         </Grid>
                         <Grid item xs={8} md={3} display="flex" justifyContent="center">
                             <StyledCard>
                                 <SchoolIcon />
                                 <Typography color="primary.main" textAlign="center" fontWeight={"bold"}>Education</Typography>
-                                <Typography color="primary.main" textAlign="center">4/6 at FATEC...</Typography>
-                                <Typography color="primary.main" textAlign="center">5/10 at UNIVAP...</Typography>
+                                <Typography color="primary.main" textAlign="center">
+                                    4/6 at FATEC
+                                    <Tooltip title="Banco de Dados">
+                                        <span> (BD)</span>
+                                    </Tooltip>
+                                </Typography>
+                                <Typography color="primary.main" textAlign="center">
+                                    5/10 at UNIVAP
+                                    <Tooltip title="Análise e Desenvolvimento de Sistemas">
+                                        <span> (ADS)</span>
+                                    </Tooltip>
+                                </Typography>
                             </StyledCard>
                         </Grid>
                     </Grid>
@@ -55,4 +71,4 @@ const About = () => {
         </>
     )
 }
-export default About
+export default About;
