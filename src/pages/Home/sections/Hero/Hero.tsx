@@ -54,7 +54,12 @@ const Hero = () => {
     }));
 
     const handleDownloadClick = () => {
-        window.open('https://drive.google.com/uc?export=download&id=1-Qasqgp78geDiTKdT3LScUGayjusZ8_Q', '_blank');
+        const link = document.createElement('a');
+        link.href = '/src/assets/CV/CV.pdf'; // Caminho relativo ao `public`
+        link.download = 'Currículo - Ali Mohamed.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     const handleContactClick = () => {
