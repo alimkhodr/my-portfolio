@@ -28,7 +28,7 @@ const TypingText = styled(Typography)(({ theme }) => ({
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     borderRight: `3px solid ${theme.palette.primary.contrastText}`,
-    animation: `${typing} 2s steps(30, end), ${blinkCaret} 0.45s step-end infinite`,
+    animation: `${typing} 4s steps(30, end), ${blinkCaret} 0.45s step-end infinite`,
 }));
 
 
@@ -50,7 +50,7 @@ const Hero = () => {
     const StyledImg = styled("img")(() => ({
         width: "75%",
         borderRadius: "50%",
-        boxShadow: `0 0px 60px 1px ${theme.palette.primary.dark}`
+        boxShadow: `0 0px 60px 2px ${theme.palette.primary.dark}`
     }));
 
     const handleDownloadClick = () => {
@@ -76,10 +76,12 @@ const Hero = () => {
                         </Grid>
                         <Grid item xs={12} md={7} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
                             <Typography color="secondary.main" variant="h1" textAlign="center">Ali Mohamed</Typography>
-                            <TypingText color="primary.contrastText" variant="h4" textAlign="center">
-                                I'm a Full Stack Developer
-                            </TypingText>
-                            <Grid container display="flex" justifyContent="center" spacing={3} pt={2}>
+                            <Grid>
+                                <TypingText color="primary.contrastText" variant="h4" textAlign="center">
+                                    I'm a Full Stack Developer
+                                </TypingText>
+                            </Grid>
+                            <Grid container display="flex" justifyContent="center" spacing={3} pt={5}>
                                 <Grid item xs={10} md={4} display="flex" justifyContent="center">
                                     <StyledButton onClick={handleDownloadClick}>
                                         <DownloadIcon /><Typography>Download CV</Typography>
