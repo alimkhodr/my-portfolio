@@ -24,6 +24,7 @@ const NavBar = () => {
                         <MenuItem sx={{ display: { xs: 'none', md: 'block' } }} component="a" href="#about">About</MenuItem>
                         <MenuItem sx={{ display: { xs: 'none', md: 'block' } }} component="a" href="#skills">Skills</MenuItem>
                         <MenuItem sx={{ display: { xs: 'none', md: 'block' } }} component="a" href="#projects">Projects</MenuItem>
+                        <MenuItem sx={{ display: { xs: 'none', md: 'block' } }} component="a" href="#footer">Contacts</MenuItem>
                     </div>
                     <IconButton
                         edge="end"
@@ -51,6 +52,9 @@ const NavBar = () => {
                     </ListItem>
                     <ListItem button component="a" href="#projects" onClick={handleDrawerToggle}>
                         <ListItemText primary="Projects" />
+                    </ListItem>
+                    <ListItem button component="a" href="#footer" onClick={handleDrawerToggle}>
+                        <ListItemText primary="Contacts" />
                     </ListItem>
                 </List>
             </Drawer>
