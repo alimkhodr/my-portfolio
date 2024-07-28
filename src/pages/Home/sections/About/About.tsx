@@ -34,11 +34,11 @@ const About = () => {
                                 <WorkspacePremiumIcon />
                                 <Typography color="primary.main" textAlign="center" fontWeight={"bold"}>Experience</Typography>
                                 <Typography color="primary.main" textAlign="center">
-                                    +1,5 year at
+                                    +1 year at
                                     <a href="https://www.aptiv.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <span> APTIV </span>
                                     </a>
-                                    (Internship)
+                                    (Intern)
                                 </Typography>
                             </StyledCard>
                         </Grid>
@@ -62,9 +62,7 @@ const About = () => {
                         </Grid>
                     </Grid>
                     <Typography color="primary.main" textAlign="justify">
-                        Profissional de Tecnologia motivado e dedicado, com formação técnica em Desenvolvimento de Sistemas e foco atual em Banco de Dados e Análise de Sistemas. Avançado em inglês, possuo habilidades avançadas em metodologias ágeis, como Scrum, e em princípios de melhoria contínua, como Kaizen.
-                        Mantenho-me atualizado constantemente, buscando a excelência técnica e alinhamento com as últimas tendências do setor.
-                        Com uma abordagem organizada e meticulosa, tanto no ambiente físico quanto na programação, busco contribuir para ambientes dinâmicos com minha paixão pela tecnologia e comprometimento com a eficiência e a inovação.
+                        Motivated and dedicated Technology Professional with technical training in Systems Development, currently focusing on Database and Systems Analysis. Proficient in English, I have advanced skills in agile methodologies such as Scrum and continuous improvement principles like Kaizen. I constantly stay updated, striving for technical excellence and alignment with the latest industry trends. With an organized and meticulous approach, both in the physical environment and in programming, I aim to contribute to dynamic environments with my passion for technology and commitment to efficiency and innovation.
                     </Typography>
                 </Container>
             </StyledAbout>
