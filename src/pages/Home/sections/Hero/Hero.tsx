@@ -79,7 +79,7 @@ const Hero = () => {
                             <TypingText color="primary.contrastText" variant="h4" textAlign="center">
                                 I'm a Full Stack Developer
                             </TypingText>
-                            <Grid container display="flex" justifyContent="center" spacing={3} pt={4}>
+                            <Grid container display="flex" justifyContent="center" spacing={3} pt={2}>
                                 <Grid item xs={10} md={4} display="flex" justifyContent="center">
                                     <StyledButton onClick={handleDownloadClick}>
                                         <DownloadIcon /><Typography>Download CV</Typography>
