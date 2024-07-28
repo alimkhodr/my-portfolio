@@ -55,7 +55,7 @@ const Hero = () => {
 
     const handleDownloadClick = () => {
         const link = document.createElement('a');
-        link.href = '/src/assets/CV/CV.pdf'; // Caminho relativo ao `public`
+        link.href = '/CV/CV.pdf';
         link.download = 'Currículo - Ali Mohamed.pdf';
         document.body.appendChild(link);
         link.click();
