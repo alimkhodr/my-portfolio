@@ -38,7 +38,14 @@ const About = () => {
                                     <a href="https://www.aptiv.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <span> APTIV </span>
                                     </a>
-                                    (Intern)
+                                    (Developer)
+                                </Typography>
+                                <Typography color="primary.main" textAlign="center">
+                                    Since 11/24 at
+                                    <a href="https://querobolsa.com.br/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        <span> Quero Educação </span>
+                                    </a>
+                                    (Developer)
                                 </Typography>
                             </StyledCard>
                         </Grid>
