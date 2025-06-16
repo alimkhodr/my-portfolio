@@ -62,7 +62,7 @@ const About = () => {
                         </Grid>
                     </Grid>
                     <Typography color="primary.main" textAlign="justify">
-                        Motivated and dedicated Technology Professional with technical training in Systems Development, currently focusing on Database and Systems Analysis. Proficient in English, I have advanced skills in agile methodologies such as Scrum and continuous improvement principles like Kaizen. I constantly stay updated, striving for technical excellence and alignment with the latest industry trends. With an organized and meticulous approach, both in the physical environment and in programming, I aim to contribute to dynamic environments with my passion for technology and commitment to efficiency and innovation.
+                        I began my journey as a developer during high school, where I took a technical course in Systems Development. After graduating, I enrolled in the morning program of the Systems Analysis and Development course at Fatec. In the third semester, I switched to the evening Database course, allowing me to balance my studies with an internship in the field and gain practical experience early on.
                     </Typography>
                 </Container>
             </StyledAbout>
